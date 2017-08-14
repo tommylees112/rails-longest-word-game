@@ -1,0 +1,13 @@
+<h1>Score</h1>
+
+<p>You took: <%= @time %> seconds </p>
+<p>You scored: <%= @score %> points </p>
+<p><%= @message %></p>
+
+<h3>Game Statistics</h3>
+<p>You have played <%= @user_count %> games.</p>
+<p>Your total score is <%= @total_score %></p>
+
+<%= link_to "Play Again!", "/game" %>
+
+<%= link_to "Reset Statistics", :controller => "games", :action => "reset" %>

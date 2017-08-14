@@ -1,0 +1,20 @@
+<h1>Welcome to the Longest Word Game!</h1>
+
+<h3>Your Grid</h3>
+<%=  @grid.join(" ") %>
+
+<h3>What's your best shot?</h3>
+<div class="container">
+  <form action="/score" method="get">
+    <div class="form-group row">
+      <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Attempt:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control form-control-lg" id="lgFormGroupInput" name="attempt" placeholder="sdfdhd">
+      </div>
+    </div>
+    <input type="hidden" name="grid" value="<%= @grid.join %>">
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+  </form>
+</div>
+
+<p></p>
